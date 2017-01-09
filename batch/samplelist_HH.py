@@ -5,23 +5,45 @@ samplelists = [
 ####### DATA
 
         # ICHEP GOLDEN JSON -- 12.9 fb-1
-        'BTagCSVRun2016B-PromptReco-v1',
+        #'BTagCSVRun2016B-PromptReco-v1',
         #'BTagCSVRun2016B-PromptReco-v2', not full tranferred
-        'BTagCSVRun2016C-PromptReco-v2',
-        'BTagCSVRun2016D-PromptReco-v2',
-        'BTagCSVRun2016E-PromptReco-v2',
-        'BTagCSVRun2016F-PromptReco-v1',
+        #'BTagCSVRun2016C-PromptReco-v2',
+        #'BTagCSVRun2016D-PromptReco-v2',
+        #'BTagCSVRun2016E-PromptReco-v2',
+        #'BTagCSVRun2016F-PromptReco-v1',
         #'BTagCSVRun2016G-PromptReco-v1', not full tranferred
-        'BTagCSVRun2016H-PromptReco-v1',
+        #'BTagCSVRun2016H-PromptReco-v1',
 
         # ICHEP GOLDEN JSON -- 12.9 fb-1  -- for trigger study
-        'SingleMuonRun2016B-PromptReco-v1',
-        'SingleMuonRun2016B-PromptReco-v2', 
-        'SingleMuonRun2016C-PromptReco-v2',
-        'SingleMuonRun2016D-PromptReco-v2',
-        'SingleMuonRun2016E-PromptReco-v2',
-        'SingleMuonRun2016F-PromptReco-v1',
-        'SingleMuonRun2016G-PromptReco-v1',
+        #'SingleMuonRun2016B-PromptReco-v1',
+        #'SingleMuonRun2016B-PromptReco-v2', 
+        #'SingleMuonRun2016C-PromptReco-v2',
+        #'SingleMuonRun2016D-PromptReco-v2',
+        #'SingleMuonRun2016E-PromptReco-v2',
+        #'SingleMuonRun2016F-PromptReco-v1',
+        #'SingleMuonRun2016G-PromptReco-v1',
+
+        # MORIOND GOLDEN JSON -- 36 fb-1
+        'BTagCSVRun2016B-23Sep2016-v2',
+        'BTagCSVRun2016B-23Sep2016-v3',
+        'BTagCSVRun2016C-23Sep2016-v1',
+        'BTagCSVRun2016D-23Sep2016-v1',
+        'BTagCSVRun2016E-23Sep2016-v1',
+        'BTagCSVRun2016F-23Sep2016-v1',
+        'BTagCSVRun2016G-23Sep2016-v1',
+        'BTagCSVRun2016H-PromptReco-v2',
+        'BTagCSVRun2016H-PromptReco-v3',
+
+        # MORIOND GOLDEN JSON -- 36 fb-1  -- for trigger study
+        'SingleMuonRun2016B-23Sep2016-v2',
+        'SingleMuonRun2016B-23Sep2016-v3',
+        'SingleMuonRun2016C-23Sep2016-v1',
+        'SingleMuonRun2016D-23Sep2016-v1',
+        'SingleMuonRun2016E-23Sep2016-v1',
+        'SingleMuonRun2016F-23Sep2016-v1',
+        'SingleMuonRun2016G-23Sep2016-v1',
+        'SingleMuonRun2016H-PromptReco-v2',
+        'SingleMuonRun2016H-PromptReco-v3',
 
 ####### MC
 	'GluGluToHHTo4B_node_2_13TeV-madgraph_reHLT-v1',

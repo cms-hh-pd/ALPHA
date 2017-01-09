@@ -1,3 +1,6 @@
+dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/120000/0E414D75-06B9-E611-8B4D-0CC47A78A4A0.root
+dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/120000/52CE9056-06B9-E611-BBFE-0CC47A4D7600.root
+dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/120000/EA5D4B7E-06B9-E611-93EC-0025905A48D8.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/50000/001B31C0-248C-E611-B7BD-0025905B860E.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/50000/001C375D-098B-E611-9453-0025905B85E8.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/50000/0072CC9F-4E8B-E611-B724-90B11C28232B.root
@@ -949,7 +952,6 @@ dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/Sing
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/16DF1B32-D58B-E611-9CC3-901B0E5427B0.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/244F69EF-9687-E611-8D0E-02163E013BF0.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/24F45DA4-178B-E611-88D2-0CC47A4C8E8A.root
-dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/285AB153-918B-E611-9D18-008CFAF2931E.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/2C6EB48F-D987-E611-B3D0-485B39897242.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/2E0C92A0-158B-E611-9261-001E67E6F5EE.root
 dcap://t2-srm-02.lnl.infn.it/pnfs/lnl.infn.it/data/cms//store/data/Run2016C/SingleElectron/MINIAOD/23Sep2016-v1/70000/303DE9CD-C68B-E611-A9E0-44A842CFC9B2.root
