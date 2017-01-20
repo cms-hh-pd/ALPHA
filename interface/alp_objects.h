@@ -179,6 +179,8 @@ namespace alp {
         hadronFlavour_(rhs.hadronFlavour_),
         ptRaw_(rhs.ptRaw_),
         JESunc_(rhs.JESunc_),
+        JERuncUp_(rhs.JERuncUp_),
+        JERuncDown_(rhs.JERuncDown_),
         puId_(rhs.puId_),
         mult_(rhs.mult_),
         chm_(rhs.chm_),
@@ -219,6 +221,8 @@ namespace alp {
       float CMVA() const { return disc(CMVA_name);}
       float ptRaw() const { return ptRaw_;};
       float JESunc() const { return JESunc_;};
+      float JERuncUp() const { return JERuncUp_;};
+      float JERuncDown() const { return JERuncDown_;};
       float puId() const { return puId_;};
       float mult() const { return mult_;};
       float chm() const { return chm_;};
@@ -233,6 +237,8 @@ namespace alp {
       int hadronFlavour_ = 0;
       float ptRaw_ = 0;
       float JESunc_ = 0;
+      float JERuncUp_ = 0;
+      float JERuncDown_ = 0;
       float puId_ = 0;
       float mult_ = 0;
       float chm_ = 0;

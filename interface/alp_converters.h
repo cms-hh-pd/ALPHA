@@ -23,7 +23,9 @@ namespace alp {
     dest.partonFlavour_ = orig.partonFlavour();
     dest.hadronFlavour_ = orig.hadronFlavour();
     dest.ptRaw_ = orig.correctedJet(0).pt();
-    dest.JESunc_ = orig.userFloat("JESUncertainty");    
+    dest.JESunc_ = orig.userFloat("JESUncertainty");   
+    dest.JERuncUp_ = orig.userFloat("JERUncertaintyUp");
+    dest.JERuncDown_ = orig.userFloat("JERUncertaintyDown"); 
     dest.puId_ = orig.userFloat("pileupJetId:fullDiscriminant");
     dest.mult_ = orig.chargedMultiplicity() + orig.neutralMultiplicity();
     dest.chm_ = orig.chargedHadronMultiplicity();
