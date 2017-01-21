@@ -16,6 +16,7 @@ JetAnalyzer::JetAnalyzer(edm::ParameterSet& PSet, edm::ConsumesCollector&& CColl
     RecalibrateMass(PSet.getParameter<bool>("recalibrateMass")),
     RecalibratePuppiMass(PSet.getParameter<bool>("recalibratePuppiMass")),
     SmearJets(PSet.getParameter<bool>("smearJets")),
+    JECshift(PSet.getParameter<int>("jecShift")),
     JECUncertaintyMC(PSet.getParameter<std::string>("jecUncertaintyMC")),
     JECUncertaintyDATA(PSet.getParameter<std::string>("jecUncertaintyDATA")),
     JetCorrectorMC(PSet.getParameter<std::vector<std::string> >("jecCorrectorMC")),
@@ -33,6 +34,7 @@ JetAnalyzer::JetAnalyzer(edm::ParameterSet& PSet, edm::ConsumesCollector&& CColl
     UseRecoil(PSet.getParameter<bool>("metRecoil")),
     RecoilMCFile(PSet.getParameter<std::string>("metRecoilMC")),
     RecoilDataFile(PSet.getParameter<std::string>("metRecoilData")),
+    JERshift(PSet.getParameter<int>("jerShift")),
     JerName_res(PSet.getParameter<std::string>("jerNameRes")),
     JerName_sf(PSet.getParameter<std::string>("jerNameSf"))
 {
@@ -253,7 +255,12 @@ std::vector<pat::Jet> JetAnalyzer::FillJetVector(const edm::Event& iEvent) {
 //             std::cout << "smearFactor     " << smearFactor << "\n";
 //             std::cout << "smearFactorUp   " << smearFactorUp << "\n";
 //             std::cout << "smearFactorDown " << smearFactorDown << "\n";
-            jet.setP4(jet.p4() * smearFactor);
+
+            if(JERshift == -1) jet.setP4(jet.p4() * smearFactorDown);
+            else if (JERshift == 1) jet.setP4(jet.p4() * smearFactorUp);
+            else jet.setP4(jet.p4() * smearFactor);
+
+            jet.addUserFloat("JERUncertainty", smearFactor);
             jet.addUserFloat("JERUncertaintyUp", smearFactorUp);
             jet.addUserFloat("JERUncertaintyDown", smearFactorDown);           
         }        

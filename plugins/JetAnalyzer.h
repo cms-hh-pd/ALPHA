@@ -77,6 +77,7 @@ class JetAnalyzer {
         int JetId;
         float Jet1Pt, Jet2Pt, JetEta;
         bool AddQG, RecalibrateJets, RecalibrateMass, RecalibratePuppiMass, SmearJets;
+        int JECshift;
         std::string JECUncertaintyMC;
         std::string JECUncertaintyDATA;
         std::vector<std::string> JetCorrectorMC;
@@ -93,6 +94,7 @@ class JetAnalyzer {
         bool UseRecoil;
         std::string RecoilMCFile;
         std::string RecoilDataFile;
+        int JERshift;
         std::string JerName_res;
         std::string JerName_sf;
         float Rparameter;

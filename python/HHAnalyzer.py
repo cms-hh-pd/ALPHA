@@ -304,12 +304,13 @@ process.ntuple = cms.EDAnalyzer('HHAnalyzer',
         smearJets = cms.bool(True),
         vertices = cms.InputTag('offlineSlimmedPrimaryVertices'),
         rho = cms.InputTag('fixedGridRhoFastjetAll'),
+        jecShift = cms.int32(0),  # -1: down, 0: nominal, 1: up
         jecUncertaintyDATA = cms.string('{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA_Uncertainty_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2') ),
         jecUncertaintyMC = cms.string('{0}/src/Analysis/ALPHA/data/{1}_MC/{1}_MC_Uncertainty_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2') ),
         jecCorrectorDATA = cms.vstring(
             '{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA_L1FastJet_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2'),
-            '{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA/Spring16_25nsV6_DATA_L2Relative_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2'),
-            '{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA/Spring16_25nsV6_DATA_L3Absolute_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2'),
+            '{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA_L2Relative_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2'),
+            '{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA_L3Absolute_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2'),
             '{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA_L2L3Residual_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2'),
         ),
         jecCorrectorMC = cms.vstring(
@@ -336,9 +337,10 @@ process.ntuple = cms.EDAnalyzer('HHAnalyzer',
         metRecoil = cms.bool(False),
         metRecoilMC = cms.string('{0}/src/Analysis/ALPHA/data/recoilfit_gjetsMC_Zu1_pf_v5.root'.format(os.environ['CMSSW_BASE'])),
         metRecoilData = cms.string('{0}/src/Analysis/ALPHA/data/recoilfit_gjetsData_Zu1_pf_v5.root'.format(os.environ['CMSSW_BASE'])),
-        jerNameRes = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_PtResolution_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2')), #Spring16_25nsV10
-        jerNameSf = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_SF_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2')), #Spring16_25nsV10
-
+        jerShift = cms.int32(0),  # -1: down, 0: nominal, 1: up
+        jerNameRes = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_PtResolution_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_25nsV10')),
+        jerNameSf = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_SF_AK4PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_25nsV10')),
+    
     ),
     fatJetSet = cms.PSet(
         jets = cms.InputTag('slimmedJetsAK8'),#('slimmedJetsAK8'), #selectedPatJetsAK8PFCHSPrunedPacked
@@ -352,7 +354,8 @@ process.ntuple = cms.EDAnalyzer('HHAnalyzer',
         recalibratePuppiMass = cms.bool(True),
         vertices = cms.InputTag('offlineSlimmedPrimaryVertices'),
         smearJets = cms.bool(True),
-        rho = cms.InputTag('fixedGridRhoFastjetAll'),        
+        rho = cms.InputTag('fixedGridRhoFastjetAll'),       
+        jecShift = cms.int32(0),  # -1: down, 0: nominal, 1: up      
         jecUncertaintyDATA = cms.string('{0}/src/Analysis/ALPHA/data/{1}_DATA/{1}_DATA_Uncertainty_AK8PFPuppi.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2')),
         jecUncertaintyMC = cms.string('{0}/src/Analysis/ALPHA/data/{1}_MC/{1}_MC_Uncertainty_AK8PFPuppi.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2')),
         jecCorrectorDATA = cms.vstring(
@@ -385,9 +388,11 @@ process.ntuple = cms.EDAnalyzer('HHAnalyzer',
         metRecoil = cms.bool(False),
         metRecoilMC = cms.string(''),
         metRecoilData = cms.string(''),
-        jerNameRes = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_PtResolution_AK8PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2')),
-        jerNameSf = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_SF_AK8PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_23Sep2016V2')),
-   ),
+        jerShift = cms.int32(0),  # -1: down, 0: nominal, 1: up
+        jerNameRes = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_PtResolution_AK8PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_25nsV10')),
+        jerNameSf = cms.string('{0}/src/Analysis/ALPHA/data/JER/{1}_MC_SF_AK8PFchs.txt'.format(os.environ['CMSSW_BASE'], 'Spring16_25nsV10')),
+
+    ),
     writeNElectrons = cms.int32(0),
     writeNMuons = cms.int32(0),
     writeNLeptons = cms.int32(2),
