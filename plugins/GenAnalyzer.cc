@@ -462,16 +462,37 @@ std::vector<reco::GenParticle> GenAnalyzer::PartonsFromDecays(const std::vector<
 }
 
 // returns a vector with the first n particles which have pdgIDs
+// NB! does not work as intended with Pythia 8
 std::vector<reco::GenParticle> GenAnalyzer::FirstNGenParticles(const std::vector<int> & pdgIds, std::size_t n)  {
   
   // vector to save the rtons
   std::vector<reco::GenParticle> particles;
 
   if(isRealData or PythiaLOSample) return particles;
-
+    	
   for (auto & genParticle : *GenCollection ) {
     // check if pdgid in vector
     if (std::find(pdgIds.begin(), pdgIds.end(), genParticle.pdgId()) != pdgIds.end()) {
+        particles.emplace_back(genParticle);
+    }
+    if (particles.size() == n) return particles;
+  }
+
+  return particles;
+}
+
+
+// returns a vector with the first n particles which have pdgIDs and which do not have a mother with the same pdgId
+std::vector<reco::GenParticle> GenAnalyzer::FirstNGenParticlesWithDiffMother(const std::vector<int> & pdgIds, std::size_t n, int motherId)  {
+  std::vector<reco::GenParticle> particles;
+
+  if(isRealData or PythiaLOSample) return particles;
+    	
+  for (auto & genParticle : *GenCollection ) {
+    // check if pdgid in vector
+    if (std::find(pdgIds.begin(), pdgIds.end(), genParticle.pdgId()) != pdgIds.end()) {
+	  if(genParticle.pdgId() == genParticle.mother(0)->pdgId()) continue;
+	  if(motherId != -1 && genParticle.mother(0)->pdgId() != motherId) continue;
           particles.emplace_back(genParticle);
     }
     if (particles.size() == n) return particles;

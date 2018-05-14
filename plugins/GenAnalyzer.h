@@ -45,7 +45,8 @@ class GenAnalyzer {
         virtual std::pair<float, float> GetQ2Weight(const edm::Event&);
         virtual std::vector<reco::GenParticle> PartonsFromDecays(const std::vector<int> & pdgIds);
         virtual std::vector<reco::GenParticle> PartonsFromDecays(const std::vector<int> & pdgIds, std::vector<reco::GenParticle> & genDecay );
-        virtual std::vector<reco::GenParticle> FirstNGenParticles(const std::vector<int> & pdgIds, std::size_t n); 
+        virtual std::vector<reco::GenParticle> FirstNGenParticles(const std::vector<int> & pdgIds, std::size_t n);
+	virtual std::vector<reco::GenParticle> FirstNGenParticlesWithDiffMother(const std::vector<int> & pdgIds, std::size_t n, int=-1);  
 
       
     private:

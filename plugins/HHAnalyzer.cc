@@ -166,8 +166,9 @@ void HHAnalyzer::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup
     std::vector<reco::GenParticle> GenPVect = theGenAnalyzer->FillGenVector(iEvent);    
     std::vector<reco::GenParticle> GenHsPart;
     std::vector<reco::GenParticle> GenBFromHsPart = theGenAnalyzer->PartonsFromDecays({25}, GenHsPart);
-    std::vector<reco::GenParticle> TL_GenHsPart = theGenAnalyzer->FirstNGenParticles({25}, 2);
-    std::vector<reco::GenParticle> TL_GenBFromHsPart = theGenAnalyzer->FirstNGenParticles({5,-5}, 4);
+    std::vector<reco::GenParticle> TL_GenHsPart = theGenAnalyzer->FirstNGenParticlesWithDiffMother({25}, 2);
+    std::vector<reco::GenParticle> TL_GenBFromHsPart = theGenAnalyzer->FirstNGenParticlesWithDiffMother({5,-5}, 4, 25);
+    
     
     Hist["a_nEvents"]->Fill(2., EventWeight);
     
